@@ -34,10 +34,35 @@ class ChannelList extends React.Component{
 }
 
 class ChannelForm extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {};
+  }
+
+  onChange(event){
+    this.setState({
+      channelName: event.target.value
+    });
+    // console.log(event.target.value);
+  }
+  onSubmit(event){
+    let {channelName} = this.state;
+    console.log(channelName);
+    channels.push({
+      name: channelName
+    });
+    this.setState({
+      channelName: ''
+    });
+    event.preventDefault();
+  }
   render(){
     return(
-      <form>
-        <input type='text' />
+      <form onSubmit={this.onSubmit.bind(this)}>
+        <input type='text' 
+          onChange={this.onChange.bind(this)}
+          value={this.state.channelName}
+        />
       </form>
     )
   }
