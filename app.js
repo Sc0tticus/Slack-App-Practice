@@ -3,8 +3,6 @@ let channels = [
   {name: 'Software Support'}
 ];
 
-// asdfaasdsD
-
 let channelComponents = channels.map(function(channel){
   return <Channel name={channel.name} />
 });
@@ -35,6 +33,27 @@ class ChannelList extends React.Component{
   }
 }
 
-ReactDOM.render(<ChannelList channels={channels}/>,
+class ChannelForm extends React.Component{
+  render(){
+    return(
+      <form>
+        <input type='text' />
+      </form>
+    )
+  }
+}
+
+class ChannelSection extends React.Component{
+  render(){
+    return(
+    <div>
+      <ChannelList channels={channels} />
+      <ChannelForm />
+    </div>
+    )
+  }
+}
+
+ReactDOM.render(<ChannelSection />,
   document.getElementById('app'));
 
