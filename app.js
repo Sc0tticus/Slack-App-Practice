@@ -3,7 +3,7 @@ let channels = [
   {name: 'Software Support'}
 ];
 
-// asdfa
+// asdfaasdsD
 
 let channelComponents = channels.map(function(channel){
   return <Channel name={channel.name} />
