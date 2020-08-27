@@ -1,7 +1,3 @@
-// let channelComponents = channels.map(function(channel){
-//   return <Channel name={channel.name} />
-// });
-
 class Channel extends React.Component{
   onClick(){
     console.log('I was clicked', this.props.name);
