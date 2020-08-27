@@ -7,3 +7,5 @@ class Channel extends React.Component{
 }
 
 ReactDOM.render(<Channel />, document.getElementById('app'));
+
+// asdfasdf
