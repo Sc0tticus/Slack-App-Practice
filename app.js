@@ -3,6 +3,8 @@ let channels = [
   {name: 'Software Support'}
 ];
 
+// asdfa
+
 let channelComponents = channels.map(function(channel){
   return <Channel name={channel.name} />
 });
